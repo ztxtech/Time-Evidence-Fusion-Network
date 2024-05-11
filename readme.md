@@ -1,7 +1,26 @@
-# Time-Evidence Fusion Network (TEFN): A Novel Backbone for Time Series Forecasting
+<div align="center">
+  <h2><b> Time-Evidence Fusion Network (TEFN): A Novel Backbone for Time Series Forecasting </b></h2>
+</div>
+<div align="center">
+
+![GitHub last commit](https://img.shields.io/github/last-commit/ztxtech/Time-Evidence-Fusion-Network)
+![GitHub Repo stars](https://img.shields.io/github/stars/ztxtech/Time-Evidence-Fusion-Network)
+![GitHub forks](https://img.shields.io/github/forks/ztxtech/Time-Evidence-Fusion-Network)
+
+![Google Scholar](https://img.shields.io/badge/Tianxiang_Zhan-4285F4?logo=googlescholar&logoColor=white)
+[![ResearchGate](https://img.shields.io/badge/Tianxiang_Zhan-00CCBB?logo=ResearchGate&logoColor=white)](https://www.researchgate.net/profile/Tianxiang-Zhan)
+[![Outlook](https://img.shields.io/badge/Tianxiang_Zhan-0078D4?logo=microsoft-outlook&logoColor=white)](mailto:zhantianxianguestc@hotmail.com)
+![arxiv](https://img.shields.io/badge/math.CO-1408.3644-b31b1b?style=flat&logo=arxiv&logoColor=red)
+
+![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+</div>
 
 ## Overview
-This is the official code implementation project for paper **"Time Evidence Fusion Network: Multi-source View in Long-Term Time Series Forecasting"**. The code implementation refers to [Time-Series-Library](https://github.com/thuml/Time-Series-Library). Thanks very much for [Time-Series-Library](https://github.com/thuml/Time-Series-Library)'s contribution to this project.
+This is the official code implementation project for paper **"Time Evidence Fusion Network: Multi-source View in Long-Term Time Series Forecasting"**. The code implementation refers to [![GitHub](https://img.shields.io/badge/thuml-TimeSeriesLibrary-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library). Thanks very much for [![GitHub](https://img.shields.io/badge/thuml-TimeSeriesLibrary-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library)'s contribution to this project.
 
 ![TEFN](/fig/TEFN.png)
 The **Time-Evidence Fusion Network (TEFN)** is a groundbreaking deep learning model designed for long-term time series forecasting. It integrates the principles of information fusion and evidence theory to achieve superior performance in real-world applications where timely predictions are crucial. TEFN introduces the Basic Probability Assignment (BPA) Module, leveraging fuzzy theory, and the Time Evidence Fusion Network to enhance prediction accuracy, stability, and interpretability.
@@ -28,9 +47,9 @@ The **Time-Evidence Fusion Network (TEFN)** is a groundbreaking deep learning mo
 
 ### Requirements
 
-- Python >= 3.6
-- PyTorch >= 1.7.0
-- Other dependencies listed in `requirements.txt`
+- ![Python](https://img.shields.io/badge/python->3.6-3670A0?logo=python&logoColor=ffdd54) Python >= 3.6
+- ![PyTorch](https://img.shields.io/badge/PyTorch->1.7.0-%23EE4C2C.svg?logo=PyTorch&logoColor=white) PyTorch >= 1.7.0
+- ![Python](https://img.shields.io/badge/PyPI-3670A0?logo=PyPI&logoColor=ffdd54) Other dependencies listed in `requirements.txt`
 
 ### Installation
 
@@ -46,11 +65,11 @@ pip install -r requirements.txt
 
 #### Download Dataset
 
-You can obtain datasets from [[Google Drive]](https://drive.google.com/drive/folders/13Cg1KYOlzM5C7K8gK8NfC-F3EYxkM3D2?usp=sharing) or [[Baidu Drive]](https://pan.baidu.com/s/1r3KhGd0Q9PJIUZdfEYoymg?pwd=i9iy), Then place the downloaded data in the folder`./dataset`. 
+You can obtain datasets from [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/13Cg1KYOlzM5C7K8gK8NfC-F3EYxkM3D2?usp=sharing) or [![Baidu Drive](https://img.shields.io/badge/Baidu-Pan-2932E1?logo=Baidu&logoColor=white)](https://pan.baidu.com/s/1r3KhGd0Q9PJIUZdfEYoymg?pwd=i9iy), Then place the downloaded data in the folder`./dataset`. 
 
 #### Load Config
 
-The development of this project was modified from [Time-Series-Library](https://github.com/thuml/Time-Series-Library). Thanks very much for [Time-Series-Library](https://github.com/thuml/Time-Series-Library) open source code.
+
 
 1. Modify the specific configuration file in `./run_config.py`.
 
@@ -64,7 +83,7 @@ python run_config.py
 
 #### Other Operations
 
-Other related operations refer to [Time-Series-Library](https://github.com/thuml/Time-Series-Library).
+Other related operations refer to [![GitHub](https://img.shields.io/badge/thuml-TimeSeriesLibrary-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library).
 
 
 #### Citation
@@ -81,6 +100,6 @@ If you find TEFN useful in your research, please cite our work as per the citati
 
 If you have any questions or suggestions, feel free to contact:
 
-Tianxiang Zhan [(zhantianxianguestc@hotmail.com)](mailto:zhantianxianguestc@hotmail.com)
+Tianxiang Zhan [(zhantianxianguestc@hotmail.com) ![Outlook](https://img.shields.io/badge/Tianxiang_Zhan-0078D4?logo=microsoft-outlook&logoColor=white)](mailto:zhantianxianguestc@hotmail.com)
 
 Or describe it in Issues.
