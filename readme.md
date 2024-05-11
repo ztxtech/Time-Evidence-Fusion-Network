@@ -10,7 +10,7 @@
 ![Google Scholar](https://img.shields.io/badge/Tianxiang_Zhan-4285F4?logo=googlescholar&logoColor=white)
 [![ResearchGate](https://img.shields.io/badge/Tianxiang_Zhan-00CCBB?logo=ResearchGate&logoColor=white)](https://www.researchgate.net/profile/Tianxiang-Zhan)
 [![Outlook](https://img.shields.io/badge/Tianxiang_Zhan-0078D4?logo=microsoft-outlook&logoColor=white)](mailto:zhantianxianguestc@hotmail.com)
-![arxiv](https://img.shields.io/badge/math.CO-1408.3644-b31b1b?style=flat&logo=arxiv&logoColor=red)
+![arxiv](https://img.shields.io/badge/cs.LG-XXXX.XXXX-b31b1b?style=flat&logo=arxiv&logoColor=red)
 
 ![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)
