@@ -1,5 +1,5 @@
 <div align="center">
-  <h2><b> Time-Evidence Fusion Network (TEFN): A Novel Backbone for Time Series Forecasting </b></h2>
+  <h2><b> Time-Evidence Fusion Network (TEFN):<br/> A Novel Backbone for Time Series Forecasting </b></h2>
 </div>
 <div align="center">
 
