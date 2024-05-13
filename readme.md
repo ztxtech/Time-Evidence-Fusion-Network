@@ -4,12 +4,12 @@
 </div>
 <div align="center">
 
-![GitHub last commit](https://img.shields.io/github/last-commit/ztxtech/Time-Evidence-Fusion-Network)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ztxtech/Time-Evidence-Fusion-Network)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ztxtech/Time-Evidence-Fusion-Network)
-![GitHub Repo stars](https://img.shields.io/github/stars/ztxtech/Time-Evidence-Fusion-Network)
-![GitHub forks](https://img.shields.io/github/forks/ztxtech/Time-Evidence-Fusion-Network)
-![GitHub watchers](https://img.shields.io/github/watchers/ztxtech/Time-Evidence-Fusion-Network)
+[![GitHub last commit](https://img.shields.io/github/last-commit/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network/activity?ref=master&activity_type=direct_push)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network/graphs/commit-activity)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network)
+[![GitHub Repo stars](https://img.shields.io/github/stars/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network)
+[![GitHub forks](https://img.shields.io/github/forks/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network)
+[![GitHub watchers](https://img.shields.io/github/watchers/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network)
 
 [![Google Scholar](https://img.shields.io/badge/Tianxiang_Zhan-4285F4?logo=googlescholar&logoColor=white)](https://scholar.google.com.hk/citations?user=bRYz250AAAAJ)
 [![ResearchGate](https://img.shields.io/badge/Tianxiang_Zhan-00CCBB?logo=ResearchGate&logoColor=white)](https://www.researchgate.net/profile/Tianxiang-Zhan)
