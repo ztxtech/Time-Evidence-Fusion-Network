@@ -2,7 +2,8 @@
   <h2><b> Time Evidence Fusion Network (TEFN): 
     <br/> Multi-source View in Long-Term Time Series Forecasting </b></h2>
 </div>
-<div align="center">
+
+**Repo Status:**  
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network/activity?ref=master&activity_type=direct_push)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network/graphs/commit-activity)
@@ -11,17 +12,19 @@
 [![GitHub forks](https://img.shields.io/github/forks/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network)
 [![GitHub watchers](https://img.shields.io/github/watchers/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network)
 
+**Author Information:**
+
 [![Google Scholar](https://img.shields.io/badge/Tianxiang_Zhan-4285F4?logo=googlescholar&logoColor=white)](https://scholar.google.com.hk/citations?user=bRYz250AAAAJ)
 [![ResearchGate](https://img.shields.io/badge/Tianxiang_Zhan-00CCBB?logo=ResearchGate&logoColor=white)](https://www.researchgate.net/profile/Tianxiang-Zhan)
 [![Outlook](https://img.shields.io/badge/Tianxiang_Zhan-0078D4?logo=microsoft-outlook&logoColor=white)](mailto:zhantianxianguestc@hotmail.com)
 [![arxiv](https://img.shields.io/badge/cs.LG-2405.06419-b31b1b?style=flat&logo=arxiv&logoColor=red)](https://arxiv.org/abs/2405.06419)
 
+**Implementation and License:**
+
 ![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-
-</div>
 
 ## Overview
 This is the official code implementation project for paper **"Time Evidence Fusion Network: Multi-source View in Long-Term Time Series Forecasting"**. The code implementation refers to [![GitHub](https://img.shields.io/badge/thuml-TimeSeriesLibrary-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library). Thanks very much for [![GitHub](https://img.shields.io/badge/thuml-TimeSeriesLibrary-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library)'s contribution to this project.
