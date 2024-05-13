@@ -3,7 +3,7 @@
     <br/> Multi-source View in Long-Term Time Series Forecasting </b></h2>
 </div>
 
-**Repo Status:**  
+**Repo Status:**
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network/activity?ref=master&activity_type=direct_push)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network/graphs/commit-activity)
@@ -12,15 +12,9 @@
 [![GitHub forks](https://img.shields.io/github/forks/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network)
 [![GitHub watchers](https://img.shields.io/github/watchers/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network)
 
-**Author Information:**
-
-[![Google Scholar](https://img.shields.io/badge/Tianxiang_Zhan-4285F4?logo=googlescholar&logoColor=white)](https://scholar.google.com.hk/citations?user=bRYz250AAAAJ)
-[![ResearchGate](https://img.shields.io/badge/Tianxiang_Zhan-00CCBB?logo=ResearchGate&logoColor=white)](https://www.researchgate.net/profile/Tianxiang-Zhan)
-[![Outlook](https://img.shields.io/badge/Tianxiang_Zhan-0078D4?logo=microsoft-outlook&logoColor=white)](mailto:zhantianxianguestc@hotmail.com)
-[![arxiv](https://img.shields.io/badge/cs.LG-2405.06419-b31b1b?style=flat&logo=arxiv&logoColor=red)](https://arxiv.org/abs/2405.06419)
-
 **Implementation and License:**
 
+[![arxiv](https://img.shields.io/badge/cs.LG-2405.06419-b31b1b?style=flat&logo=arxiv&logoColor=red)](https://arxiv.org/abs/2405.06419)
 ![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -112,6 +106,14 @@ If you find TEFN useful in your research, please cite our work as per the citati
 
 If you have any questions or suggestions, feel free to contact:
 
-Tianxiang Zhan [(zhantianxianguestc@hotmail.com) ![Outlook](https://img.shields.io/badge/Tianxiang_Zhan-0078D4?logo=microsoft-outlook&logoColor=white)](mailto:zhantianxianguestc@hotmail.com)
+- (**Primary**)Tianxiang Zhan [(zhantianxianguestc@hotmail.com)](mailto:zhantianxianguestc@hotmail.com)
+  [![Outlook](https://img.shields.io/badge/Tianxiang_Zhan-0078D4?logo=microsoft-outlook&logoColor=white)](mailto:zhantianxianguestc@hotmail.com)
+ [![Google Scholar](https://img.shields.io/badge/Tianxiang_Zhan-4285F4?logo=googlescholar&logoColor=white)](https://scholar.google.com.hk/citations?user=bRYz250AAAAJ)
+ [![ResearchGate](https://img.shields.io/badge/Tianxiang_Zhan-00CCBB?logo=ResearchGate&logoColor=white)](https://www.researchgate.net/profile/Tianxiang-Zhan)
+- Yuanpeng He [(heyuanpeng@stu.pku.edu.cn)](mailto:heyuanpeng@stu.pku.edu.cn)
+ [![Outlook](https://img.shields.io/badge/Yuanpeng_He-0078D4?logo=microsoft-outlook&logoColor=white)](mailto:heyuanpeng@stu.pku.edu.cn)
+ [![Google Scholar](https://img.shields.io/badge/Yuanpeng_He-4285F4?logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=HaefBCQAAAAJ)
+ [![ResearchGate](https://img.shields.io/badge/Yuanpeng_He-00CCBB?logo=ResearchGate&logoColor=white)](https://www.researchgate.net/profile/Yuanpeng-He)
+
 
 Or describe it in Issues.
