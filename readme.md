@@ -5,6 +5,8 @@
 <div align="center">
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/ztxtech/Time-Evidence-Fusion-Network)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ztxtech/Time-Evidence-Fusion-Network)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ztxtech/Time-Evidence-Fusion-Network)
 ![GitHub Repo stars](https://img.shields.io/github/stars/ztxtech/Time-Evidence-Fusion-Network)
 ![GitHub forks](https://img.shields.io/github/forks/ztxtech/Time-Evidence-Fusion-Network)
 ![GitHub watchers](https://img.shields.io/github/watchers/ztxtech/Time-Evidence-Fusion-Network)
