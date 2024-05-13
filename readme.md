@@ -98,7 +98,7 @@ Other related operations refer to [![GitHub](https://img.shields.io/badge/thuml-
 If you find TEFN useful in your research, please cite our work as per the citation.
 
 ```bibtex
-@misc{zhan2024time,
+@misc{TEFN,
       title={Time Evidence Fusion Network: Multi-source View in Long-Term Time Series Forecasting}, 
       author={Tianxiang Zhan and Yuanpeng He and Zhen Li and Yong Deng},
       year={2024},
