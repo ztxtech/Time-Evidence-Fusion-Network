@@ -10,7 +10,7 @@
 [![Google Scholar](https://img.shields.io/badge/Tianxiang_Zhan-4285F4?logo=googlescholar&logoColor=white)](https://scholar.google.com.hk/citations?user=bRYz250AAAAJ)
 [![ResearchGate](https://img.shields.io/badge/Tianxiang_Zhan-00CCBB?logo=ResearchGate&logoColor=white)](https://www.researchgate.net/profile/Tianxiang-Zhan)
 [![Outlook](https://img.shields.io/badge/Tianxiang_Zhan-0078D4?logo=microsoft-outlook&logoColor=white)](mailto:zhantianxianguestc@hotmail.com)
-![arxiv](https://img.shields.io/badge/cs.LG-XXXX.XXXX-b31b1b?style=flat&logo=arxiv&logoColor=red)
+[![arxiv](https://img.shields.io/badge/cs.LG-2405.06419-b31b1b?style=flat&logo=arxiv&logoColor=red)](https://arxiv.org/abs/2405.06419)
 
 ![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)
@@ -91,7 +91,12 @@ Other related operations refer to [![GitHub](https://img.shields.io/badge/thuml-
 If you find TEFN useful in your research, please cite our work as per the citation.
 
 ```bibtex
-
+@misc{zhan2024time,
+      title={Time Evidence Fusion Network: Multi-source View in Long-Term Time Series Forecasting}, 
+      author={Tianxiang Zhan and Yuanpeng He and Zhen Li and Yong Deng},
+      year={2024},
+      journal={arXiv}
+}
 
 ```
 
