@@ -47,13 +47,15 @@ if __name__ == '__main__':
     torch.manual_seed(fix_seed)
     np.random.seed(fix_seed)
 
-    #config_path = '{your chosen config file path}'
-
+    config_path = '{your chosen config file path}'
     args = load_config(config_path)
 
-    args.use_gpu = True if torch.cuda.is_available() else False
+    args.use_gpu = True \
+        if (torch.cuda.is_available()
+            or torch.backends.mps.is_available()) \
+        else False
 
-    print(torch.cuda.is_available())
+    print(args.use_gpu)
 
     if args.use_gpu and args.use_multi_gpu:
         args.devices = args.devices.replace(' ', '')

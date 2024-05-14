@@ -92,7 +92,7 @@ def get_args():
 
     # GPU
     parser.add_argument('--use_gpu', type=bool, default=True, help='use gpu')
-    parser.add_argument('--gpu', type=int, default=0, help='gpu')
+    parser.add_argument('--gpu', type=str, default='0', help='gpu')
     parser.add_argument('--use_multi_gpu', action='store_true', help='use multiple gpus', default=False)
     parser.add_argument('--devices', type=str, default='0,1,2,3', help='device ids of multile gpus')
 
@@ -131,9 +131,9 @@ def get_args():
 
     args = parser.parse_args()
 
-    args.use_gpu = True if torch.cuda.is_available() else False
+    args.use_gpu = True if torch.cuda.is_available() or torch.backends.mps.is_available() else False
 
-    print(torch.cuda.is_available())
+    print(args.use_gpu)
 
     if args.use_gpu and args.use_multi_gpu:
         args.devices = args.devices.replace(' ', '')
@@ -142,6 +142,7 @@ def get_args():
         args.gpu = args.device_ids[0]
 
     return args
+
 
 def get_setting(args, ii):
     setting = '{}_{}_{}_{}_ft{}_sl{}_ll{}_pl{}_dm{}_nh{}_el{}_dl{}_df{}_expand{}_dc{}_fc{}_eb{}_dt{}_{}_{}'.format(
@@ -166,7 +167,6 @@ def get_setting(args, ii):
         args.des, ii)
 
     return setting
-
 
 
 if __name__ == '__main__':

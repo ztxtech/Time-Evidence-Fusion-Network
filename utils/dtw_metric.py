@@ -1,6 +1,7 @@
+from math import isinf
+
 from numpy import array, zeros, full, argmin, inf, ndim
 from scipy.spatial.distance import cdist
-from math import isinf
 
 
 def dtw(x, y, dist, warp=1, w=inf, s=1.0):
@@ -119,6 +120,7 @@ if __name__ == '__main__':
     s = 1.0
     if 1:  # 1-D numeric
         from sklearn.metrics.pairwise import manhattan_distances
+
         x = [0, 0, 1, 1, 2, 4, 2, 1, 2, 0]
         y = [1, 1, 1, 2, 2, 2, 2, 3, 2, 0]
         dist_fun = manhattan_distances
@@ -126,11 +128,13 @@ if __name__ == '__main__':
         # s = 1.2
     elif 0:  # 2-D numeric
         from sklearn.metrics.pairwise import euclidean_distances
+
         x = [[0, 0], [0, 1], [1, 1], [1, 2], [2, 2], [4, 3], [2, 3], [1, 1], [2, 2], [0, 1]]
         y = [[1, 0], [1, 1], [1, 1], [2, 1], [4, 3], [4, 3], [2, 3], [3, 1], [1, 2], [1, 0]]
         dist_fun = euclidean_distances
     else:  # 1-D list of strings
         from nltk.metrics.distance import edit_distance
+
         # x = ['we', 'shelled', 'clams', 'for', 'the', 'chowder']
         # y = ['class', 'too']
         x = ['i', 'soon', 'found', 'myself', 'muttering', 'to', 'the', 'walls']
@@ -142,6 +146,7 @@ if __name__ == '__main__':
 
     # Vizualize
     from matplotlib import pyplot as plt
+
     plt.imshow(cost.T, origin='lower', cmap=plt.cm.Reds, interpolation='nearest')
     plt.plot(path[0], path[1], '-o')  # relation
     plt.xticks(range(len(x)), x)

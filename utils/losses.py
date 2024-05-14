@@ -16,10 +16,9 @@
 Loss functions for PyTorch.
 """
 
+import numpy as np
 import torch as t
 import torch.nn as nn
-import numpy as np
-import pdb
 
 
 def divide_no_nan(a, b):
