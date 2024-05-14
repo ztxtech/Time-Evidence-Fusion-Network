@@ -116,12 +116,12 @@ python run_config.py
 
 ``` json
 {
-...
-# Nvidia CUDA Device {0}
-# 'gpu': 0
-# Apple MPS Device
-# 'gpu': mps
-...
+  # ...
+  # Nvidia CUDA Device {0}
+  # 'gpu': 0
+  # Apple MPS Device
+  # 'gpu': mps
+  # ...
 }
 ```
 
