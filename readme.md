@@ -29,9 +29,9 @@
 
 This is the official code implementation project for paper **"Time Evidence Fusion Network: Multi-source View in
 Long-Term Time Series Forecasting"**. The code implementation refers
-to [![GitHub](https://img.shields.io/badge/thuml-TimeSeriesLibrary-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library).
+to [![GitHub](https://img.shields.io/badge/thuml-Time_Series_Library-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library).
 Thanks very much
-for [![GitHub](https://img.shields.io/badge/thuml-TimeSeriesLibrary-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library)'
+for [![GitHub](https://img.shields.io/badge/thuml-Time_Series_Library-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library)'
 s contribution to this project.
 
 ![TEFN](/fig/TEFN.png)
@@ -112,7 +112,7 @@ python run_config.py
 #### Other Operations
 
 Other related operations refer
-to [![GitHub](https://img.shields.io/badge/thuml-TimeSeriesLibrary-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library).
+to [![GitHub](https://img.shields.io/badge/thuml-Time_Series_Library-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library).
 
 #### Citation
 
