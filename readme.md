@@ -12,14 +12,13 @@
 [![GitHub forks](https://img.shields.io/github/forks/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network)
 [![GitHub watchers](https://img.shields.io/github/watchers/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network)
 
-**Implementation and License:**
+**Implementation:**
 
 [![arxiv](https://img.shields.io/badge/cs.LG-2405.06419-b31b1b?style=flat&logo=arxiv&logoColor=red)](https://arxiv.org/abs/2405.06419)
 ![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)
 ![nVIDIA](https://img.shields.io/badge/nVIDIA-cuda-%2376B900.svg?logo=nVIDIA&logoColor=white)
 ![Apple](https://img.shields.io/badge/Mac-MPS-%23000000.svg?logo=apple&logoColor=white)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Updates
 
@@ -32,6 +31,7 @@ Long-Term Time Series Forecasting"**. The code implementation refers
 to [![GitHub](https://img.shields.io/badge/thuml-Time_Series_Library-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library).
 Thanks very much
 for [![GitHub](https://img.shields.io/badge/thuml-Time_Series_Library-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library)'
+s
 s contribution to this project.
 
 ![TEFN](/fig/TEFN.png)
@@ -143,6 +143,12 @@ If you find TEFN useful in your research, please cite our work as per the citati
 }
 
 ```
+
+## Acknowledgement
+
+We appreciate the following GitHub repos a lot for their valuable code and efforts.
+
+- [Time Series Library ![GitHub](https://img.shields.io/badge/thuml-Time_Series_Library-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library)'
 
 ## Contact
 
