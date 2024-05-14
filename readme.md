@@ -23,7 +23,7 @@
 
 ## Updates
 
-🚩 **News** (2024.05.14) Compatible with MPS backend, MacBook Air M1 RAM 8g can be trained normally.
+🚩 **News** (2024.05.14) Compatible with MPS backend, TEFN can be trained by MacBook Air M1 RAM 8G.
 
 ## Overview
 
