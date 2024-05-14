@@ -109,6 +109,22 @@ config_path = '{your chosen config file path}'
 python run_config.py
 ```
 
+#### Switching Running Devices
+
+1. Find required configuration file `*.json` in `./configs`.
+2. Modify `*.json` file.
+
+``` json
+{
+...
+# Nvidia CUDA Device {0}
+# 'gpu': 0
+# Apple MPS Device
+# 'gpu': mps
+...
+}
+```
+
 #### Other Operations
 
 Other related operations refer
