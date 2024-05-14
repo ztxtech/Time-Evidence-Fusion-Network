@@ -15,14 +15,15 @@
 **Implementation:**
 
 [![arxiv](https://img.shields.io/badge/cs.LG-2405.06419-b31b1b?style=flat&logo=arxiv&logoColor=red)](https://arxiv.org/abs/2405.06419)
-![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54)
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)
-![nVIDIA](https://img.shields.io/badge/nVIDIA-cuda-%2376B900.svg?logo=nVIDIA&logoColor=white)
-![Apple](https://img.shields.io/badge/Mac-MPS-%23000000.svg?logo=apple&logoColor=white)
+[![Python](https://img.shields.io/badge/python-3670A0?logo=python&logoColor=ffdd54)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?logo=PyTorch&logoColor=white)](https://pytorch.org/)
+[![nVIDIA](https://img.shields.io/badge/nVIDIA-cuda-%2376B900.svg?logo=nVIDIA&logoColor=white)](https://pytorch.org/docs/2.1/cuda.html)
+[![Apple](https://img.shields.io/badge/Mac-MPS-%23000000.svg?logo=apple&logoColor=white)](https://pytorch.org/docs/2.1/mps.html)
 
 ## Updates
 
-🚩 **News** (2024.05.14) Compatible with MPS backend, TEFN can be trained by MacBook Air M1 RAM 8G.
+🚩 **News** (2024.05.14) Compatible with MPS backend, TEFN can be trained by [![Apple](https://img.shields.io/badge/MacBook_Air_2020-M1_8G-%23000000.svg?logo=apple&logoColor=white)](https://support.apple.com/zh-cn/111883).
+
 
 ## Overview
 
@@ -30,9 +31,7 @@ This is the official code implementation project for paper **"Time Evidence Fusi
 Long-Term Time Series Forecasting"**. The code implementation refers
 to [![GitHub](https://img.shields.io/badge/thuml-Time_Series_Library-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library).
 Thanks very much
-for [![GitHub](https://img.shields.io/badge/thuml-Time_Series_Library-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library)'
-s
-s contribution to this project.
+for [![GitHub](https://img.shields.io/badge/thuml-Time_Series_Library-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library)'s contribution to this project.
 
 ![TEFN](/fig/TEFN.png)
 The **Time-Evidence Fusion Network (TEFN)** is a groundbreaking deep learning model designed for long-term time series
