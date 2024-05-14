@@ -114,7 +114,7 @@ python run_config.py
 1. Find required configuration file `*.json` in `./configs`.
 2. Modify `*.json` file.
 
-``` json
+``` 
 {
   # ...
   # Nvidia CUDA Device {0}
