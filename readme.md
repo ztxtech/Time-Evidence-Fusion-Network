@@ -119,7 +119,7 @@ python run_config.py
   # Nvidia CUDA Device {0}
   # 'gpu': 0
   # Apple MPS Device
-  # 'gpu': mps
+  # 'gpu': 'mps'
   # ...
 }
 ```
