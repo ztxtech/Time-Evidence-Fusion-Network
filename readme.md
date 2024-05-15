@@ -165,3 +165,7 @@ If you have any questions or suggestions, feel free to contact:
   [![ResearchGate](https://img.shields.io/badge/Yuanpeng_He-00CCBB?logo=ResearchGate&logoColor=white)](https://www.researchgate.net/profile/Yuanpeng-He)
 
 Or describe it in Issues.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ztxtech/Time-Evidence-Fusion-Network&type=Date)](https://star-history.com/#ztxtech/Time-Evidence-Fusion-Network&Date)
