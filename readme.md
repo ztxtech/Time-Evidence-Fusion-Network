@@ -51,7 +51,7 @@ interpretability.
   distributions related to the target outcome. This module exploits the interpretability of evidence theory, using fuzzy
   membership functions to represent uncertainty in predictions.
   ![BPA](https://cdn.jsdelivr.net/gh/ztxtech/Time-Evidence-Fusion-Network/fig/bpa.png)
-  ![BPA Diagram](.https://cdn.jsdelivr.net/gh/ztxtech/Time-Evidence-Fusion-Network/fig/inver_conv.png)
+  ![BPA Diagram](https://cdn.jsdelivr.net/gh/ztxtech/Time-Evidence-Fusion-Network/fig/inver_conv.png)
 - **Interpretability**: Due to its roots in fuzzy logic, TEFN provides clear insights into the decision-making process,
   enhancing model explainability.
   ![Channel dimension interpretability](https://cdn.jsdelivr.net/gh/ztxtech/Time-Evidence-Fusion-Network/fig/CBV.png)
