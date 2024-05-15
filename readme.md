@@ -5,6 +5,8 @@
 
 **Repo Status:**
 
+![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-green) 
+[![Visits Badge](https://badges.pufler.dev/visits/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network)
 [![GitHub last commit](https://img.shields.io/github/last-commit/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network/activity?ref=master&activity_type=direct_push)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network/graphs/commit-activity)
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ztxtech/Time-Evidence-Fusion-Network)](https://github.com/ztxtech/Time-Evidence-Fusion-Network)
