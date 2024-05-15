@@ -34,7 +34,7 @@ Thanks very much
 for [![GitHub](https://img.shields.io/badge/thuml-Time_Series_Library-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library)'s contribution to this project.
 
 ![TEFN](/fig/TEFN.png)
-The **Time-Evidence Fusion Network (TEFN)** is a groundbreaking deep learning model designed for long-term time series
+The **Time Evidence Fusion Network (TEFN)** is a groundbreaking deep learning model designed for long-term time series
 forecasting. It integrates the principles of information fusion and evidence theory to achieve superior performance in
 real-world applications where timely predictions are crucial. TEFN introduces the Basic Probability Assignment (BPA)
 Module, leveraging fuzzy theory, and the Time Evidence Fusion Network to enhance prediction accuracy, stability, and
