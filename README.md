@@ -151,6 +151,9 @@ We appreciate the following GitHub repos a lot for their valuable code and effor
 
 - [Time Series Library ![GitHub](https://img.shields.io/badge/thuml-Time_Series_Library-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library)'
 - [TSFpaper ![GitHub](https://img.shields.io/badge/ddz16-TSFpaper-%23121011?logo=github&logoColor=white)](https://github.com/ddz16/TSFpaper)'
+- [awesome-opensource ![GitHub](https://img.shields.io/badge/gitroomhq-awesome--opensource-%23121011?logo=github&logoColor=white)](https://github.com/gitroomhq/awesome-opensource)
+
+
 
 ## Contact
 
