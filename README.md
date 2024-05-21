@@ -150,8 +150,8 @@ If you find TEFN useful in your research, please cite our work as per the citati
 We appreciate the following GitHub repos a lot for their valuable code and efforts.
 
 - [Time Series Library ![GitHub](https://img.shields.io/badge/thuml-Time_Series_Library-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library)'
-- [TSFpaper ![GitHub](https://img.shields.io/badge/ddz16-TSFpaper-%23121011?logo=github&logoColor=white)](https://github.com/ddz16/TSFpaper)'
-- [Time-Series-Forecasting-and-Deep-Learning ![GitHub](https://img.shields.io/badge/DaoSword-Time--Series--Forecasting--and--Deep--Learning--%23121011?logo=github&logoColor=white)](https://github.com/gitroomhq/awesome-opensource](https://github.com/DaoSword/Time-Series-Forecasting-and-Deep-Learning)
+- [TSFpaper ![GitHub](https://img.shields.io/badge/ddz16-TSFpaper-%23121011?logo=github&logoColor=white)](https://github.com/ddz16/TSFpaper)
+- [Time-Series-Forecasting-and-Deep-Learning ![GitHub](https://img.shields.io/badge/DaoSword-Time--Series--Forecasting--and--Deep--Learning-%23121011?logo=github&logoColor=white)](https://github.com/DaoSword/Time-Series-Forecasting-and-Deep-Learning)
 - [awesome-opensource ![GitHub](https://img.shields.io/badge/gitroomhq-awesome--opensource-%23121011?logo=github&logoColor=white)](https://github.com/gitroomhq/awesome-opensource)
 
 
