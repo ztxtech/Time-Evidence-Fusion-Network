@@ -154,6 +154,19 @@ We appreciate the following GitHub repos a lot for their valuable code and effor
 - [Time-Series-Forecasting-and-Deep-Learning ![GitHub](https://img.shields.io/badge/DaoSword-Time--Series--Forecasting--and--Deep--Learning-%23121011?logo=github&logoColor=white)](https://github.com/DaoSword/Time-Series-Forecasting-and-Deep-Learning)
 - [awesome-opensource ![GitHub](https://img.shields.io/badge/gitroomhq-awesome--opensource-%23121011?logo=github&logoColor=white)](https://github.com/gitroomhq/awesome-opensource)
 
+### From [Time Series Library](https://github.com/thuml/Time-Series-Library)
+
+
+This library is constructed based on the following repos:
+
+- Forecasting: https://github.com/thuml/Autoformer.
+
+All the experiment datasets are public, and we obtain them from the following links:
+
+- Long-term Forecasting and Imputation: https://github.com/thuml/Autoformer.
+
+- Short-term Forecasting: https://github.com/ServiceNow/N-BEATS.
+
 
 
 ## Contact
