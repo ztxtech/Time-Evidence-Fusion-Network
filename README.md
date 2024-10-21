@@ -35,7 +35,7 @@ to [![GitHub](https://img.shields.io/badge/thuml-Time_Series_Library-%23121011?l
 Thanks very much
 for [![GitHub](https://img.shields.io/badge/thuml-Time_Series_Library-%23121011?logo=github&logoColor=white)](https://github.com/thuml/Time-Series-Library)'s contribution to this project.
 
-![TEFN](https://cdn.jsdelivr.net/gh/ztxtech/Time-Evidence-Fusion-Network/fig/TEFN.png)
+![TEFN](./fig/TEFN.png)
 The **Time Evidence Fusion Network (TEFN)** is a groundbreaking deep learning model designed for long-term time series
 forecasting. It integrates the principles of information fusion and evidence theory to achieve superior performance in
 real-world applications where timely predictions are crucial. TEFN introduces the Basic Probability Assignment (BPA)
@@ -46,27 +46,27 @@ interpretability.
 
 - **Information Fusion Perspective**: TEFN addresses time series forecasting from a unique angle, focusing on the fusion
   of multi-source information to boost prediction accuracy.
-  ![Information Fusion Perspective](https://cdn.jsdelivr.net/gh/ztxtech/Time-Evidence-Fusion-Network/fig/ms.png)
+  ![Information Fusion Perspective](./fig/ms.png)
 - **BPA Module**: At its core, TEFN incorporates a BPA Module that maps diverse information sources to probability
   distributions related to the target outcome. This module exploits the interpretability of evidence theory, using fuzzy
   membership functions to represent uncertainty in predictions.
-  ![BPA Diagram](https://cdn.jsdelivr.net/gh/ztxtech/Time-Evidence-Fusion-Network/fig/inver_conv.png)
-  ![BPA](https://cdn.jsdelivr.net/gh/ztxtech/Time-Evidence-Fusion-Network/fig/bpa.png)
+  ![BPA Diagram](./fig/inver_conv.png)
+  ![BPA](./fig/bpa.png)
 - **Interpretability**: Due to its roots in fuzzy logic, TEFN provides clear insights into the decision-making process,
   enhancing model explainability.
-  ![Channel dimension interpretability](https://cdn.jsdelivr.net/gh/ztxtech/Time-Evidence-Fusion-Network/fig/CBV.png)
-  ![Time dimension interpretability](https://cdn.jsdelivr.net/gh/ztxtech/Time-Evidence-Fusion-Network/fig/TBV.png)
+  ![Channel dimension interpretability](./fig/CBV.png)
+  ![Time dimension interpretability](./fig/TBV.png)
 - **State-of-the-Art Performance**: TEFN demonstrates competitive results, with prediction errors comparable to leading
   models like PatchTST, while maintaining high efficiency and requiring fewer parameters than complex models such as
   Dlinear.
-  ![SOTA](https://cdn.jsdelivr.net/gh/ztxtech/Time-Evidence-Fusion-Network/fig/sota.png)
+  ![SOTA](./fig/sota.png)
 - **Robustness and Stability**: The model showcases resilience to hyperparameter tuning, exhibiting minimal fluctuations
   even under random selections, ensuring consistent performance across various settings.
-  ![Visualization of Robustness](https://cdn.jsdelivr.net/gh/ztxtech/Time-Evidence-Fusion-Network/fig/vr.png)
-  ![Variance](https://cdn.jsdelivr.net/gh/ztxtech/Time-Evidence-Fusion-Network/fig/var.png)
+  ![Visualization of Robustness](./fig/vr.png)
+  ![Variance](./fig/var.png)
 - **Efficiency**: With optimized training times and a compact model footprint, TEFN is particularly suitable for
   resource-constrained environments.
-  ![Efficiency](https://cdn.jsdelivr.net/gh/ztxtech/Time-Evidence-Fusion-Network/fig/size.png)
+  ![Efficiency](./fig/size.png)
 
 ## Getting Started
 
