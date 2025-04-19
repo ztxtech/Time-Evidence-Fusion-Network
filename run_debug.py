@@ -10,9 +10,10 @@ from utils.print_args import print_args
 
 
 def get_setting(args, ii):
-    setting = '{}_{}_e{}_N{}_T{}_C{}_{}_R{}_P{}_D{}'.format(
+    setting = '{}_{}_p{}_e{}_N{}_T{}_C{}_{}_R{}_P{}_D{}'.format(
         args.model,
         args.data,
+        args.pred_len,
         args.e_layers,
         int(args.use_norm),
         int(args.use_T_model),
@@ -60,8 +61,9 @@ if __name__ == '__main__':
     ##### Debug Hyperparameters Segment Head
     # args.kernel_activation = 'mish'
     args.kernel_activation = 'attn'
-    args.learning_rate = 1e-3
+    args.learning_rate = 1e-4
     args.fusion_method = 'attn'
+    args.train_epochs = 1
     # args.fusion_method = 'concat'
 
     #### Debug Hyperparameters Segment Tail

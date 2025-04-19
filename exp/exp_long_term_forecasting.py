@@ -315,8 +315,8 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         np.save(folder_path + 'pred.npy', preds)
         np.save(folder_path + 'true.npy', trues)
 
-        self.args.mse = mse
-        self.args.mae = mae
+        self.args.mse = float(mse)
+        self.args.mae = float(mae)
         save_args_to_json(self.args, folder_path + 'args.json')
 
         return
