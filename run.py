@@ -144,7 +144,7 @@ def get_args():
                         help="Whether to use residual connection in EvidenceMachineKernel")
     ### 激活函数参数
     parser.add_argument('--kernel_activation', type=str, default='linear',
-                        choices=['linear', 'relu', 'gelu', 'swish', 'mish'],
+                        choices=['linear', 'mlp', 'attn', 'relu', 'gelu', 'swish', 'mish'],
                         help="Activation function for EvidenceMachineKernel")
     ### 概率层参数
     parser.add_argument('--use_probabilistic_layer', default=False, action="store_true",

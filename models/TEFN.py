@@ -30,6 +30,44 @@ class Mish(nn.Module):
         return x * torch.tanh(nn.functional.softplus(x))
 
 
+class MLP(nn.Module):
+    def __init__(self, input_dim, hidden_dim, output_dim, n):
+        super(MLP, self).__init__()
+        layers = []
+        # 添加n个隐藏层
+        for i in range(n):
+            if i == 0:
+                layers.append(nn.Linear(input_dim, hidden_dim))
+            else:
+                layers.append(nn.Linear(hidden_dim, hidden_dim))
+            layers.append(nn.ReLU())  # 可替换为其他激活函数
+        # 最后一层输出层
+        layers.append(nn.Linear(hidden_dim, output_dim))
+        self.mlp = nn.Sequential(*layers)
+
+    def forward(self, x):
+        return self.mlp(x)
+
+
+class Attention(nn.Module):
+    def __init__(self, input_dim):
+        super(Attention, self).__init__()
+        self.query = nn.Linear(input_dim, input_dim)
+        self.key = nn.Linear(input_dim, input_dim)
+        self.value = nn.Linear(input_dim, input_dim)
+        self.softmax = nn.Softmax(dim=-1)
+
+    def forward(self, x):
+        q = self.query(x)
+        k = self.key(x)
+        v = self.value(x)
+
+        scores = torch.matmul(q, k.transpose(-2, -1))
+        attention_weights = self.softmax(scores)
+        output = torch.matmul(attention_weights, v)
+        return output
+
+
 class EvidenceMachineKernel(nn.Module):
     def __init__(self, C, F, activation=None, use_residual=True):
         super(EvidenceMachineKernel, self).__init__()
@@ -50,37 +88,22 @@ class EvidenceMachineKernel(nn.Module):
         elif activation == 'mish':
             self.activation = Mish()
         elif activation == 'linear':
-            self.activation = nn.Linear(self.F, self.F)
+            self.activation = nn.Linear(self.C * self.F, self.C * self.F)
+        elif activation == 'mlp':
+            self.activation = MLP(self.C * self.F, 2 * self.C * self.F, self.C * self.F, 2)
+        elif activation == 'attn':
+            self.activation = Attention(self.C * self.F)
 
     def forward(self, x):
         x = torch.einsum('btc,cf->btcf', x, self.C_weight) + self.C_bias
+        B, T, C, F = x.shape
+        merged = x.reshape(B, T, -1)  # 安全替换view为reshape
+
         if self.activation is not None:
-            if self.use_residual:
-                x = self.activation(x) + x  # 残差连接
-            else:
-                x = self.activation(x)
-        return x
+            act_out = self.activation(merged)
+            merged = act_out + merged if self.use_residual else act_out
 
-
-class AttentionFusion(nn.Module):
-    def __init__(self, input_dim):
-        super(AttentionFusion, self).__init__()
-        self.query = nn.Linear(input_dim, input_dim)
-        self.key = nn.Linear(input_dim, input_dim)
-        self.value = nn.Linear(input_dim, input_dim)
-        self.softmax = nn.Softmax(dim=-1)
-
-    def forward(self, t_out, c_out):
-        # 拼接 t_out 和 c_out
-        combined = torch.cat([t_out, c_out], dim=-1)
-        q = self.query(combined)
-        k = self.key(combined)
-        v = self.value(combined)
-
-        scores = torch.matmul(q, k.transpose(-2, -1))
-        attention_weights = self.softmax(scores)
-        output = torch.matmul(attention_weights, v)
-        return output
+        return merged.reshape(B, T, C, F)
 
 
 class Model(nn.Module):
@@ -120,10 +143,9 @@ class Model(nn.Module):
 
             # 新增融合层（用于拼接场景）
             if self.fusion_method == 'concat':
-                self.fusion_linear = nn.Linear(2 * (self.pred_len + self.seq_len),
-                                               self.pred_len + self.seq_len)
+                self.fusion_linear = nn.Linear(2 * (2 ** configs.e_layers), 2 ** configs.e_layers)
             elif self.fusion_method == 'attn':
-                self.attention_fusion = AttentionFusion((self.pred_len + self.seq_len) * 2)
+                self.attention_fusion = Attention(2 * (2 ** configs.e_layers))
 
             # 概率层
             if self.use_probabilistic_layer:
@@ -149,10 +171,10 @@ class Model(nn.Module):
             fused = t_out + c_out
         elif self.fusion_method == 'concat':
             fused = torch.cat([t_out, c_out], dim=-1)  # [B, T', C, 2F]
-            fused = self.fusion_linear(fused.reshape(-1, fused.shape[-2], fused.shape[-1]))  # 拼接后线性变换
-            fused = fused.unsqueeze(1)  # 恢复维度
+            fused = self.fusion_linear(fused)  # 拼接后线性变换
         elif self.fusion_method == 'attn':
-            fused = self.attention_fusion(t_out, c_out)
+            fused = torch.cat([t_out, c_out], dim=-1)
+            fused = self.attention_fusion(fused)
 
         x = torch.einsum('btcf->btc', fused)
 
