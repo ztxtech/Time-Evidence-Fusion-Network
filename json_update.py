@@ -9,6 +9,7 @@ def mod(data):
         data["use_C_model"] = True
         data["fusion_method"] = 'add'
         data["use_probabilistic_layer"] = False
+        data['residual'] = True
         if 'noise' not in data:
             data["noise"] = False
     return data

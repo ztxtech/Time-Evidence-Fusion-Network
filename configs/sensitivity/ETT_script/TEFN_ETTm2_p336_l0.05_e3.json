@@ -87,5 +87,6 @@
     "use_C_model": true,
     "fusion_method": "add",
     "use_probabilistic_layer": false,
-    "noise": false
+    "noise": false,
+    "residual": true
 }

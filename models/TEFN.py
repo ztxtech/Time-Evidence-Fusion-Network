@@ -29,21 +29,15 @@ class Mish(nn.Module):
     def forward(self, x):
         return x * torch.tanh(nn.functional.softplus(x))
 
-class ResidualLinear(nn.Module):
-    def __init__(self, input_dim):
-        super(ResidualLinear, self).__init__()
-        self.linear = nn.Linear(input_dim, input_dim)
-    def forward(self, x):
-        return self.linear(x) + x
-
 
 class EvidenceMachineKernel(nn.Module):
-    def __init__(self, C, F, activation=None):
+    def __init__(self, C, F, activation=None, residual=True):
         super(EvidenceMachineKernel, self).__init__()
         self.C = C
         self.F = 2 ** F
         self.C_weight = nn.Parameter(torch.randn(self.C, self.F))
         self.C_bias = nn.Parameter(torch.randn(self.C, self.F))
+        self.residual = residual
 
         # 支持更多非线性激活函数
         self.activation = None
@@ -55,13 +49,16 @@ class EvidenceMachineKernel(nn.Module):
             self.activation = Swish()
         elif activation == 'mish':
             self.activation = Mish()
-        elif activation =='res_linear':
-            self.activation = ResidualLinear(self.F)
+        elif activation =='linear':
+            self.activation = nn.Linear(self.F, self.F)
 
     def forward(self, x):
         x = torch.einsum('btc,cf->btcf', x, self.C_weight) + self.C_bias
         if self.activation is not None:
-            x = self.activation(x)  # 非线性变换
+            if self.residual:
+                x = self.activation(x) + x  # 残差连接
+            else:
+                x = self.activation(x)
         return x
 
 
@@ -111,12 +108,14 @@ class Model(nn.Module):
             self.T_model = EvidenceMachineKernel(
                 self.pred_len + self.seq_len,
                 configs.e_layers,
-                activation=configs.kernel_activation  # 新增激活函数配置
+                activation=configs.kernel_activation,
+                residual=configs.residual,# 新增激活函数配置
             )
             self.C_model = EvidenceMachineKernel(
                 configs.enc_in,
                 configs.e_layers,
-                activation=configs.kernel_activation
+                activation=configs.kernel_activation,
+                residual=configs.residual
             )
 
             # 新增融合层（用于拼接场景）

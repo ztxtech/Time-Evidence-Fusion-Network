@@ -47,7 +47,9 @@ if __name__ == '__main__':
     torch.manual_seed(fix_seed)
     np.random.seed(fix_seed)
 
-    config_path = "{your chosen config file path}"
+    # config_path = "{your chosen config file path}"
+    config_path = "configs/comparision/ETT_script/TEFN_ETTh1_p96.json"
+
     args = load_config(config_path)
 
     args.use_gpu = True \
@@ -65,7 +67,8 @@ if __name__ == '__main__':
 
 
     ##### Debug Hyperparameters Segment Head
-    # args.kernel_activation = 'relu'
+    args.kernel_activation = 'mish'
+    args.learning_rate = 1e-3
 
 
     #### Debug Hyperparameters Segment Tail
