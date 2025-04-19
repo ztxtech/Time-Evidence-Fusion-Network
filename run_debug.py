@@ -10,26 +10,18 @@ from utils.print_args import print_args
 
 
 def get_setting(args, ii):
-    setting = '{}_{}_{}_{}_ft{}_sl{}_ll{}_pl{}_dm{}_nh{}_el{}_dl{}_df{}_expand{}_dc{}_fc{}_eb{}_dt{}_{}_{}'.format(
-        args.task_name,
-        args.model_id,
+    setting = '{}_{}_e{}_N{}_T{}_C{}_{}_R{}_P{}_D{}'.format(
         args.model,
         args.data,
-        args.features,
-        args.seq_len,
-        args.label_len,
-        args.pred_len,
-        args.d_model,
-        args.n_heads,
         args.e_layers,
-        args.d_layers,
-        args.d_ff,
-        args.expand,
-        args.d_conv,
-        args.factor,
-        args.embed,
-        args.distil,
-        args.des, ii)
+        args.use_norm,
+        args.use_T_model,
+        args.use_C_model,
+        args.fusion_method,
+        args.residual,
+        args.use_probabilistic_layer,
+        args.dropout
+    )
 
     return setting
 
@@ -65,11 +57,9 @@ if __name__ == '__main__':
         args.device_ids = [int(id_) for id_ in device_ids]
         args.gpu = args.device_ids[0]
 
-
     ##### Debug Hyperparameters Segment Head
     args.kernel_activation = 'mish'
     args.learning_rate = 1e-3
-
 
     #### Debug Hyperparameters Segment Tail
 

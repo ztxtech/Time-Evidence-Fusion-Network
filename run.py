@@ -129,24 +129,24 @@ def get_args():
                         help="Discrimitive shapeDTW warp preset augmentation")
     parser.add_argument('--extra_tag', type=str, default="", help="Anything extra")
 
-
     ## TEFN
     ### 归一化层参数
     parser.add_argument('--use_norm', default=True, action="store_true", help="Whether to use normalization layer")
     ### 时间和通道维度模块参数
     parser.add_argument('--use_T_model', default=True, action="store_true", help="Whether to use time dimension module")
-    parser.add_argument('--use_C_model', default=True, action="store_true", help="Whether to use channel dimension module")
+    parser.add_argument('--use_C_model', default=True, action="store_true",
+                        help="Whether to use channel dimension module")
     parser.add_argument('--enc_in', type=int, default=7, help="Number of input channels")
     ### 融合方法参数
     parser.add_argument('--fusion_method', type=str, default='add', choices=['add', 'concat', 'attn'],
                         help="Fusion method: add, concat, or attn")
     ### 激活函数参数
-    parser.add_argument('--kernel_activation', type=str, default='linear', choices=['linear', 'relu', 'gelu', 'swish', 'mish'],
+    parser.add_argument('--kernel_activation', type=str, default='linear',
+                        choices=['linear', 'relu', 'gelu', 'swish', 'mish'],
                         help="Activation function for EvidenceMachineKernel")
     ### 概率层参数
     parser.add_argument('--use_probabilistic_layer', default=False, action="store_true",
                         help="Whether to use probabilistic layer")
-
 
     args = parser.parse_args()
 
@@ -164,26 +164,18 @@ def get_args():
 
 
 def get_setting(args, ii):
-    setting = '{}_{}_{}_{}_ft{}_sl{}_ll{}_pl{}_dm{}_nh{}_el{}_dl{}_df{}_expand{}_dc{}_fc{}_eb{}_dt{}_{}_{}'.format(
-        args.task_name,
-        args.model_id,
+    setting = '{}_{}_e{}_N{}_T{}_C{}_{}_R{}_P{}_D{}'.format(
         args.model,
         args.data,
-        args.features,
-        args.seq_len,
-        args.label_len,
-        args.pred_len,
-        args.d_model,
-        args.n_heads,
         args.e_layers,
-        args.d_layers,
-        args.d_ff,
-        args.expand,
-        args.d_conv,
-        args.factor,
-        args.embed,
-        args.distil,
-        args.des, ii)
+        args.use_norm,
+        args.use_T_model,
+        args.use_C_model,
+        args.fusion_method,
+        args.residual,
+        args.use_probabilistic_layer,
+        args.dropout
+    )
 
     return setting
 

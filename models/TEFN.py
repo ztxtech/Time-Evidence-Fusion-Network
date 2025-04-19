@@ -49,7 +49,7 @@ class EvidenceMachineKernel(nn.Module):
             self.activation = Swish()
         elif activation == 'mish':
             self.activation = Mish()
-        elif activation =='linear':
+        elif activation == 'linear':
             self.activation = nn.Linear(self.F, self.F)
 
     def forward(self, x):
@@ -109,7 +109,7 @@ class Model(nn.Module):
                 self.pred_len + self.seq_len,
                 configs.e_layers,
                 activation=configs.kernel_activation,
-                residual=configs.residual,# 新增激活函数配置
+                residual=configs.residual,  # 新增激活函数配置
             )
             self.C_model = EvidenceMachineKernel(
                 configs.enc_in,
@@ -127,7 +127,7 @@ class Model(nn.Module):
 
             # 概率层
             if self.use_probabilistic_layer:
-                self.probabilistic_layer = nn.Dropout(p=configs.dropout_rate)
+                self.probabilistic_layer = nn.Dropout(p=configs.dropout)
 
     def forecast(self, x_enc, x_mark_enc, x_dec, x_mark_dec):
         # 归一化层消融点
