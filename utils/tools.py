@@ -114,3 +114,25 @@ def adjustment(gt, pred):
 
 def cal_accuracy(y_pred, y_true):
     return np.mean(y_pred == y_true)
+
+
+import json
+
+
+def save_args_to_json(args, filename):
+    """
+    将命令行参数对象保存为JSON文件
+
+    参数:
+    args: 命令行参数对象（通常是argparse的Namespace或dict）
+    filename: 输出的JSON文件路径
+    """
+    # 将参数对象转换为字典
+    if isinstance(args, dict):
+        arg_dict = args
+    else:
+        arg_dict = vars(args)
+
+    # 保存为JSON
+    with open(filename, 'w') as f:
+        json.dump(arg_dict, f, indent=4, sort_keys=True)

@@ -11,7 +11,7 @@ from data_provider.data_factory import data_provider
 from exp.exp_basic import Exp_Basic
 from utils.dtw_metric import accelerated_dtw
 from utils.metrics import metric
-from utils.tools import EarlyStopping, adjust_learning_rate, visual
+from utils.tools import EarlyStopping, adjust_learning_rate, visual, save_args_to_json
 
 warnings.filterwarnings('ignore')
 
@@ -313,5 +313,6 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         np.save(folder_path + 'metrics.npy', np.array([mae, mse, rmse, mape, mspe]))
         np.save(folder_path + 'pred.npy', preds)
         np.save(folder_path + 'true.npy', trues)
+        save_args_to_json(self.args, folder_path + 'args.json')
 
         return
