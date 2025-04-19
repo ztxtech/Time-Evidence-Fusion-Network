@@ -59,9 +59,9 @@ if __name__ == '__main__':
 
     ##### Debug Hyperparameters Segment Head
     # args.kernel_activation = 'mish'
-    args.kernel_activation = 'mlp'
-    # args.learning_rate = 1e-3
-    # args.fusion_method = 'attn'
+    args.kernel_activation = 'attn'
+    args.learning_rate = 1e-3
+    args.fusion_method = 'attn'
     # args.fusion_method = 'concat'
 
     #### Debug Hyperparameters Segment Tail

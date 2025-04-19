@@ -302,6 +302,7 @@ class Exp_Long_Term_Forecast(Exp_Basic):
             dtw = -999
 
         mae, mse, rmse, mape, mspe = metric(preds, trues)
+
         print('mse:{}, mae:{}, dtw:{}'.format(mse, mae, dtw))
         f = open("./out/results/result_long_term_forecast.txt", 'a')
         f.write(setting + "  \n")
@@ -313,6 +314,9 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         np.save(folder_path + 'metrics.npy', np.array([mae, mse, rmse, mape, mspe]))
         np.save(folder_path + 'pred.npy', preds)
         np.save(folder_path + 'true.npy', trues)
+
+        self.args.mse = mse
+        self.args.mae = mae
         save_args_to_json(self.args, folder_path + 'args.json')
 
         return
