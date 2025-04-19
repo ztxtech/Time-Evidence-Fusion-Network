@@ -31,13 +31,13 @@ class Mish(nn.Module):
 
 
 class EvidenceMachineKernel(nn.Module):
-    def __init__(self, C, F, activation=None, residual=True):
+    def __init__(self, C, F, activation=None, use_residual=True):
         super(EvidenceMachineKernel, self).__init__()
         self.C = C
         self.F = 2 ** F
         self.C_weight = nn.Parameter(torch.randn(self.C, self.F))
         self.C_bias = nn.Parameter(torch.randn(self.C, self.F))
-        self.residual = residual
+        self.use_residual = use_residual
 
         # 支持更多非线性激活函数
         self.activation = None
@@ -55,7 +55,7 @@ class EvidenceMachineKernel(nn.Module):
     def forward(self, x):
         x = torch.einsum('btc,cf->btcf', x, self.C_weight) + self.C_bias
         if self.activation is not None:
-            if self.residual:
+            if self.use_residual:
                 x = self.activation(x) + x  # 残差连接
             else:
                 x = self.activation(x)
@@ -109,13 +109,13 @@ class Model(nn.Module):
                 self.pred_len + self.seq_len,
                 configs.e_layers,
                 activation=configs.kernel_activation,
-                residual=configs.residual,  # 新增激活函数配置
+                use_residual=configs.use_residual,  # 新增激活函数配置
             )
             self.C_model = EvidenceMachineKernel(
                 configs.enc_in,
                 configs.e_layers,
                 activation=configs.kernel_activation,
-                residual=configs.residual
+                use_residual=configs.use_residual
             )
 
             # 新增融合层（用于拼接场景）

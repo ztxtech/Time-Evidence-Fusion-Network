@@ -14,12 +14,12 @@ def get_setting(args, ii):
         args.model,
         args.data,
         args.e_layers,
-        args.use_norm,
-        args.use_T_model,
-        args.use_C_model,
+        int(args.use_norm),
+        int(args.use_T_model),
+        int(args.use_C_model),
         args.fusion_method,
-        args.residual,
-        args.use_probabilistic_layer,
+        int(args.use_residual),
+        int(args.use_probabilistic_layer),
         args.dropout
     )
 

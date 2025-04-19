@@ -140,6 +140,8 @@ def get_args():
     ### 融合方法参数
     parser.add_argument('--fusion_method', type=str, default='add', choices=['add', 'concat', 'attn'],
                         help="Fusion method: add, concat, or attn")
+    parser.add_argument('--use_residual', default=True, action="store_true",
+                        help="Whether to use residual connection in EvidenceMachineKernel")
     ### 激活函数参数
     parser.add_argument('--kernel_activation', type=str, default='linear',
                         choices=['linear', 'relu', 'gelu', 'swish', 'mish'],
