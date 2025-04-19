@@ -129,6 +129,25 @@ def get_args():
                         help="Discrimitive shapeDTW warp preset augmentation")
     parser.add_argument('--extra_tag', type=str, default="", help="Anything extra")
 
+
+    ## TEFN
+    ### 归一化层参数
+    parser.add_argument('--use_norm', default=True, action="store_true", help="Whether to use normalization layer")
+    ### 时间和通道维度模块参数
+    parser.add_argument('--use_T_model', default=True, action="store_true", help="Whether to use time dimension module")
+    parser.add_argument('--use_C_model', default=True, action="store_true", help="Whether to use channel dimension module")
+    parser.add_argument('--enc_in', type=int, default=7, help="Number of input channels")
+    ### 融合方法参数
+    parser.add_argument('--fusion_method', type=str, default='add', choices=['add', 'concat', 'attn'],
+                        help="Fusion method: add, concat, or attn")
+    ### 激活函数参数
+    parser.add_argument('--kernel_activation', type=str, default='linear', choices=['linear', 'relu', 'gelu', 'swish', 'mish'],
+                        help="Activation function for EvidenceMachineKernel")
+    ### 概率层参数
+    parser.add_argument('--use_probabilistic_layer', default=False, action="store_true",
+                        help="Whether to use probabilistic layer")
+
+
     args = parser.parse_args()
 
     args.use_gpu = True if torch.cuda.is_available() or torch.backends.mps.is_available() else False

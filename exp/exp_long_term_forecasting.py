@@ -120,15 +120,16 @@ class Exp_Long_Term_Forecast(Exp_Basic):
                 iter_count += 1
                 model_optim.zero_grad()
 
-                if self.args.noise:
-                    # 计算沿维度 t 的均值
-                    std_x = torch.std(batch_x, dim=1, keepdim=True)  # 形状变为 [b, 1, c]
+                if hasattr(self.args, 'noise'):
+                    if self.args.noise:
+                        # 计算沿维度 t 的均值
+                        std_x = torch.std(batch_x, dim=1, keepdim=True)  # 形状变为 [b, 1, c]
 
-                    # 生成噪声
-                    noise = std_x * torch.randn_like(batch_x)  # 根据均值生成噪声
+                        # 生成噪声
+                        noise = std_x * torch.randn_like(batch_x)  # 根据均值生成噪声
 
-                    # 将噪声加到 batch_x 上
-                    batch_x = batch_x + noise
+                        # 将噪声加到 batch_x 上
+                        batch_x = batch_x + noise
                 batch_x = batch_x.float().to(self.device)
                 batch_y = batch_y.float().to(self.device)
                 batch_x_mark = batch_x_mark.float().to(self.device)
