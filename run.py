@@ -6,6 +6,7 @@ import torch
 
 from exp.exp_long_term_forecasting import Exp_Long_Term_Forecast
 from utils.print_args import print_args
+from utils.tools import get_setting
 
 
 def get_args():
@@ -136,7 +137,6 @@ def get_args():
     parser.add_argument('--use_T_model', default=True, action="store_true", help="Whether to use time dimension module")
     parser.add_argument('--use_C_model', default=True, action="store_true",
                         help="Whether to use channel dimension module")
-    parser.add_argument('--enc_in', type=int, default=7, help="Number of input channels")
     ### 融合方法参数
     parser.add_argument('--fusion_method', type=str, default='add', choices=['add', 'concat', 'attn'],
                         help="Fusion method: add, concat, or attn")
@@ -165,23 +165,6 @@ def get_args():
     return args
 
 
-def get_setting(args, ii):
-    setting = '{}_{}_e{}_N{}_T{}_C{}_{}_R{}_P{}_D{}'.format(
-        args.model,
-        args.data,
-        args.e_layers,
-        args.use_norm,
-        args.use_T_model,
-        args.use_C_model,
-        args.fusion_method,
-        args.residual,
-        args.use_probabilistic_layer,
-        args.dropout
-    )
-
-    return setting
-
-
 if __name__ == '__main__':
     fix_seed = 2021
     random.seed(fix_seed)
@@ -201,7 +184,7 @@ if __name__ == '__main__':
         for ii in range(args.itr):
             # setting record of experiments
             exp = Exp(args)  # set experiments
-            setting = get_setting(args, ii)
+            setting = get_setting(args)
 
             print('>>>>>>>start training : {}>>>>>>>>>>>>>>>>>>>>>>>>>>'.format(setting))
             exp.train(setting)
@@ -211,7 +194,7 @@ if __name__ == '__main__':
             torch.cuda.empty_cache()
     else:
         ii = 0
-        setting = get_setting(args, ii)
+        setting = get_setting(args)
 
         exp = Exp(args)  # set experiments
         print('>>>>>>>testing : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))

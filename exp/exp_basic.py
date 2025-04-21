@@ -13,7 +13,7 @@ class Exp_Basic(object):
         }
         self.device = self._acquire_device()
         self.model = self._build_model().to(self.device)
- 
+
     def _build_model(self):
         raise NotImplementedError
         return None
@@ -36,11 +36,11 @@ class Exp_Basic(object):
     def _get_data(self):
         pass
 
-    def vali(self):
+    def vali(self, *args, **kwargs):
         pass
 
-    def train(self):
+    def train(self, *args, **kwargs):
         pass
 
-    def test(self):
+    def test(self, *args, **kwargs):
         pass

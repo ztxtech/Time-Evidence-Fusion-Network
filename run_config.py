@@ -1,5 +1,3 @@
-import argparse
-import json
 import random
 
 import numpy as np
@@ -7,31 +5,7 @@ import torch
 
 from exp.exp_long_term_forecasting import Exp_Long_Term_Forecast
 from utils.print_args import print_args
-
-
-def get_setting(args, ii):
-    setting = '{}_{}_e{}_N{}_T{}_C{}_{}_R{}_P{}_D{}'.format(
-        args.model,
-        args.data,
-        args.e_layers,
-        args.use_norm,
-        args.use_T_model,
-        args.use_C_model,
-        args.fusion_method,
-        args.residual,
-        args.use_probabilistic_layer,
-        args.dropout
-    )
-
-    return setting
-
-
-def load_config(config_path):
-    with open(config_path, 'r') as f:
-        args = f.read()
-    args = argparse.Namespace(**json.loads(args))
-    return args
-
+from utils.tools import load_config, get_setting
 
 if __name__ == '__main__':
     fix_seed = 2021
@@ -67,7 +41,7 @@ if __name__ == '__main__':
         for ii in range(args.itr):
             # setting record of experiments
             exp = Exp(args)  # set experiments
-            setting = get_setting(args, ii)
+            setting = get_setting(args)
 
             print('>>>>>>>start training : {}>>>>>>>>>>>>>>>>>>>>>>>>>>'.format(setting))
             exp.train(setting)
@@ -77,7 +51,7 @@ if __name__ == '__main__':
             torch.cuda.empty_cache()
     else:
         ii = 0
-        setting = get_setting(args, ii)
+        setting = get_setting(args)
 
         exp = Exp(args)  # set experiments
         print('>>>>>>>testing : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))

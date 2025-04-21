@@ -88,5 +88,6 @@
     "fusion_method": "add",
     "use_probabilistic_layer": false,
     "noise": false,
-    "use_residual": true
+    "use_residual": true,
+    "results": "./out/results/"
 }

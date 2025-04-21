@@ -56,6 +56,7 @@ class Attention(nn.Module):
         self.key = nn.Linear(input_dim, input_dim)
         self.value = nn.Linear(input_dim, input_dim)
         self.softmax = nn.Softmax(dim=-1)
+        self.linear = nn.Linear(input_dim, input_dim)
 
     def forward(self, x):
         q = self.query(x)
@@ -64,7 +65,8 @@ class Attention(nn.Module):
 
         scores = torch.matmul(q, k.transpose(-2, -1))
         attention_weights = self.softmax(scores)
-        output = torch.matmul(attention_weights, v)
+        attention_value = torch.matmul(attention_weights, v)
+        output = self.linear(attention_value)
         return output
 
 

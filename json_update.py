@@ -4,14 +4,8 @@ from pathlib import Path
 
 def mod(data):
     if isinstance(data, dict):
-        data["kernel_activation"] = None
-        data["use_T_model"] = True
-        data["use_C_model"] = True
-        data["fusion_method"] = 'add'
-        data["use_probabilistic_layer"] = False
-        data['residual'] = True
-        if 'noise' not in data:
-            data["noise"] = False
+        data.pop('result')
+        data['results'] = './out/results/'
     return data
 
 

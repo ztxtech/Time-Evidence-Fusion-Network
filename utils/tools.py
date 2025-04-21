@@ -1,4 +1,8 @@
+import argparse
+import json
 import math
+import uuid
+from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -32,7 +36,7 @@ class EarlyStopping:
         self.counter = 0
         self.best_score = None
         self.early_stop = False
-        self.val_loss_min = np.Inf
+        self.val_loss_min = np.inf
         self.delta = delta
 
     def __call__(self, val_loss, model, path):
@@ -116,9 +120,6 @@ def cal_accuracy(y_pred, y_true):
     return np.mean(y_pred == y_true)
 
 
-import json
-
-
 def save_args_to_json(args, filename):
     """
     将命令行参数对象保存为JSON文件
@@ -136,3 +137,52 @@ def save_args_to_json(args, filename):
     # 保存为JSON
     with open(filename, 'w') as f:
         json.dump(arg_dict, f, indent=4, sort_keys=True)
+
+
+def get_setting(args):
+    setting = '{}_{}_p{}_e{}_N{}_T{}_C{}_{}_R{}_P{}_D{}_{}'.format(
+        args.model,
+        args.data,
+        args.pred_len,
+        args.e_layers,
+        int(args.use_norm),
+        int(args.use_T_model),
+        int(args.use_C_model),
+        args.fusion_method,
+        int(args.use_residual),
+        int(args.use_probabilistic_layer),
+        args.dropout,
+        uuid.uuid4().hex[:6]
+    )
+
+    return setting
+
+
+def load_config(config_path):
+    with open(config_path, 'r') as f:
+        args = f.read()
+    args = argparse.Namespace(**json.loads(args))
+    return args
+
+
+def dict_eq(dict1, dict2):
+    common_keys = set(dict1.keys()) & set(dict2.keys())
+    for key in common_keys:
+        if dict1[key] != dict2[key]:
+            return False
+    return True
+
+
+def get_all_json_paths(directory_path: str, recursive: bool = False) -> list[str]:
+    path = Path(directory_path)
+    if not path.is_dir():
+        raise NotADirectoryError(f"{directory_path} 不是有效目录")
+
+    # 根据 recursive 参数选择搜索方式
+    search = path.rglob("**/*.json") if recursive else path.glob("*.json")
+
+    return [
+        str(file.resolve())
+        for file in search
+        if file.is_file()
+    ]

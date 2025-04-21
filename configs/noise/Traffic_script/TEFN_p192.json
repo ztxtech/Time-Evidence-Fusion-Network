@@ -88,5 +88,6 @@
     "use_C_model": true,
     "fusion_method": "add",
     "use_probabilistic_layer": false,
-    "use_residual": true
+    "use_residual": true,
+    "results": "./out/results/"
 }
