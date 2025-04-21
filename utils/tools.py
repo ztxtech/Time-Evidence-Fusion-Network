@@ -143,7 +143,7 @@ def save_args_to_json(args, filename):
 def get_setting(args):
     setting = '{}_{}_p{}_e{}_N{}_T{}_C{}_{}_R{}_P{}_D{}_{}'.format(
         args.model,
-        args.data,
+        args.model_id,
         args.pred_len,
         args.e_layers,
         int(args.use_norm),
