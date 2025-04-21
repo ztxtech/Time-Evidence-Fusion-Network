@@ -31,4 +31,5 @@ if __name__ == "__main__":
     delete_unmatched_folders(checkpoints_dir, results_dir)
     delete_unmatched_folders(test_results_dir, results_dir)
     log_dir = Path("./out/log")
-    shutil.rmtree(log_dir)
+    if log_dir.exists():
+        shutil.rmtree(log_dir)

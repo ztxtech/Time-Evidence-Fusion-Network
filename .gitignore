@@ -694,3 +694,4 @@ $RECYCLE.BIN/
 *.lnk
 /run_config_dir_abl.py
 /service/abl.xml
+/run_config_test.py
