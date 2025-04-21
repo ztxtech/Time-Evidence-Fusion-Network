@@ -11,7 +11,7 @@ if __name__ == "__main__":
         'use_T_model': [False],
         'use_C_model': [False],
         'fusion_method': ['concat', 'attn'],
-        'kernel_activation': ['relu', 'gelu', 'swish', 'mish', 'linear', 'mlp', 'attn'],
+        'kernel_activation': ['relu', 'gelu', 'swish', 'mish', 'linear', 'mlp', 'attn', 'elu', 'tanh'],
         'use_probabilistic_layer': [True]
     }
 

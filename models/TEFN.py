@@ -89,6 +89,10 @@ class EvidenceMachineKernel(nn.Module):
             self.activation = Swish()
         elif activation == 'mish':
             self.activation = Mish()
+        elif activation == 'tanh':
+            self.activation = nn.Tanh()
+        elif activation == 'elu':
+            self.activation = nn.ELU()
         elif activation == 'linear':
             self.activation = nn.Linear(self.C * self.F, self.C * self.F)
         elif activation == 'mlp':
