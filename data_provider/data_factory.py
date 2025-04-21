@@ -1,3 +1,4 @@
+from joblib.externals.loky.backend import get_context
 from torch.utils.data import DataLoader
 
 from data_provider.data_loader import Dataset_ETT_hour, Dataset_ETT_minute, Dataset_Custom
@@ -38,5 +39,11 @@ def data_provider(args, flag):
         batch_size=batch_size,
         shuffle=shuffle_flag,
         num_workers=args.num_workers,
-        drop_last=drop_last)
+        drop_last=drop_last,
+        prefetch_factor=args.prefetch_factor if args.num_workers > 1 else None,
+        pin_memory=True,
+        persistent_workers=True if args.num_workers > 0 else None,
+        pin_memory_device=f'cuda:{args.gpu}' if args.num_workers > 0 and args.use_gpu else '',
+        multiprocessing_context=get_context('loky') if args.num_workers > 0 else None
+    )
     return data_set, data_loader

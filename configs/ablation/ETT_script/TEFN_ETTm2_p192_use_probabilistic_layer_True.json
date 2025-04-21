@@ -25,7 +25,7 @@
     "down_sampling_window": 1,
     "down_sampling_method": null,
     "seg_len": 48,
-    "num_workers": 10,
+    "num_workers": 0,
     "itr": 1,
     "train_epochs": 10,
     "batch_size": 32,
@@ -89,5 +89,6 @@
     "use_probabilistic_layer": true,
     "noise": false,
     "use_residual": true,
-    "results": "./out/results/"
+    "results": "./out/results/",
+    "prefetch_factor": 100
 }
