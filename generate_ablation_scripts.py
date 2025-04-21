@@ -7,9 +7,9 @@ from utils.tools import get_all_json_paths
 if __name__ == "__main__":
 
     alb_args = {
-        # 'use_norm': [False],
-        # 'use_T_model': [False],
-        # 'use_C_model': [False],
+        'use_norm': [False],
+        'use_T_model': [False],
+        'use_C_model': [False],
         'fusion_method': ['concat', 'attn'],
         'kernel_activation': ['relu', 'gelu', 'swish', 'mish', 'linear', 'mlp', 'attn'],
         'use_probabilistic_layer': [True]
