@@ -692,3 +692,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/run_config_dir_abl.py

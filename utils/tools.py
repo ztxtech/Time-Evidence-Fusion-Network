@@ -1,6 +1,7 @@
 import argparse
 import json
 import math
+import random
 import uuid
 from pathlib import Path
 
@@ -186,3 +187,13 @@ def get_all_json_paths(directory_path: str, recursive: bool = False) -> list[str
         for file in search
         if file.is_file()
     ]
+
+
+def set_random_seed(seed=2021):
+    """封装随机种子设置函数，确保所有随机数生成器的确定性"""
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)  # 补充CUDA种子设置
+    torch.backends.cudnn.deterministic = True  # 补充cuDNN确定性设置
+    torch.backends.cudnn.benchmark = False
