@@ -1,0 +1,23 @@
+<service>
+    <id><service_id></id>
+    <executable>/path/to/python.exe</executable>
+    <name><service_name></name>
+    <description><description></description>
+    <onfailure action="<action>"/>
+    <arguments>/path/to/config.py</arguments>
+    <workingdirectory>/path/to/project_root</workingdirectory>
+    <priority><priority_level></priority>
+    <startmode><start_mode></startmode>
+    <logpath>/path/to/log/directory</logpath>
+    <log mode="<append/overwrite>"/>
+    <serviceaccount>
+        <username><username></username>
+        <password><password></password>
+        <allowservicelogon><true/false></allowservicelogon>
+    </serviceaccount>
+
+    <env name="WINDOWS" value="/system/path"/>
+    <env name="PYTHONPATH" value="/path/to/virtualenv"/>
+    <env name="Home_DIR" value="/project/home/directory"/>
+    <autoRefresh><true/false></autoRefresh>
+</service>

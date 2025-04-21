@@ -4,8 +4,7 @@ from pathlib import Path
 
 def mod(data):
     if isinstance(data, dict):
-        data.pop('result')
-        data['results'] = './out/results/'
+        pass
     return data
 
 
