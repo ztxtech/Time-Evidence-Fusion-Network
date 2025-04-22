@@ -49,25 +49,25 @@ class MLP(nn.Module):
         return self.mlp(x)
 
 
-# class Attention(nn.Module):
-#     def __init__(self, input_dim):
-#         super(Attention, self).__init__()
-#         self.query = nn.Linear(input_dim, input_dim)
-#         self.key = nn.Linear(input_dim, input_dim)
-#         self.value = nn.Linear(input_dim, input_dim)
-#         self.softmax = nn.Softmax(dim=-1)
-#         self.linear = nn.Linear(input_dim, input_dim)
-#
-#     def forward(self, x):
-#         q = self.query(x)
-#         k = self.key(x)
-#         v = self.value(x)
-#
-#         scores = torch.matmul(q, k.transpose(-2, -1))
-#         attention_weights = self.softmax(scores)
-#         attention_value = torch.matmul(attention_weights, v)
-#         output = self.linear(attention_value)
-#         return output
+class Attention(nn.Module):
+    def __init__(self, input_dim):
+        super(Attention, self).__init__()
+        self.query = nn.Linear(input_dim, input_dim)
+        self.key = nn.Linear(input_dim, input_dim)
+        self.value = nn.Linear(input_dim, input_dim)
+        self.softmax = nn.Softmax(dim=-1)
+        self.linear = nn.Linear(input_dim, input_dim)
+
+    def forward(self, x):
+        q = self.query(x)
+        k = self.key(x)
+        v = self.value(x)
+
+        scores = torch.matmul(q, k.transpose(-2, -1))
+        attention_weights = self.softmax(scores)
+        attention_value = torch.matmul(attention_weights, v)
+        output = self.linear(attention_value)
+        return output
 
 
 class EvidenceMachineKernel(nn.Module):
@@ -97,8 +97,8 @@ class EvidenceMachineKernel(nn.Module):
             self.activation = nn.Linear(self.C * self.F, self.C * self.F)
         elif activation == 'mlp':
             self.activation = MLP(self.C * self.F, 2 * self.C * self.F, self.C * self.F, 2)
-        # elif activation == 'attn':
-        #     self.activation = Attention(self.C * self.F)
+        elif activation == 'attn':
+            self.activation = Attention(self.C * self.F)
 
     def forward(self, x):
         x = torch.einsum('btc,cf->btcf', x, self.C_weight) + self.C_bias
