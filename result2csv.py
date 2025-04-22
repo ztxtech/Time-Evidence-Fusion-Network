@@ -24,4 +24,5 @@ if __name__ == "__main__":
     df = df[col]
     df['mse'] = df['mse'].apply(lambda x: round(x, 3))
     df['mae'] = df['mae'].apply(lambda x: round(x, 3))
+    df.sort_values(by=list(df.columns), inplace=True)
     df.to_csv(os.path.join(result_path, "output.csv"), index=False)

@@ -90,5 +90,5 @@
     "use_probabilistic_layer": false,
     "use_residual": true,
     "results": "./out/results/",
-    "prefetch_factor": 20
+    "prefetch_factor": 16
 }
